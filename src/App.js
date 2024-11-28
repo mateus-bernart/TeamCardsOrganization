@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Banner from "./componentes/Banner";
 import Formulario from "./componentes/Formulario";
 import Rodape from "./componentes/Rodape";
@@ -44,22 +44,30 @@ function App() {
     },
   ]);
 
-  const inicial = [
-    {
-      id: uuidv4(),
-      nome: "Mateus Bernart",
-      cargo: "Dev",
-      imagem: "https://github.com/mateus-bernart.png",
-      time: times[0].nome,
-      favorito: false,
-    },
-  ];
+  // const inicial = [
+  //   {
+  //     id: uuidv4(),
+  //     nome: "Mateus Bernart",
+  //     cargo: "Dev",
+  //     imagem: "https://github.com/mateus-bernart.png",
+  //     time: times[0].nome,
+  //     favorito: false,
+  //   },
+  // ];
 
-  const [colaboradores, setColaboradores] = useState(inicial);
+  const [colaboradores, setColaboradores] = useState([]);
 
-  function deletarColaborador(id) {
+  useEffect(() => {
+    fetch("http://localhost:8080/colaboradores")
+      .then((resposta) => resposta.json())
+      .then((dados) => {
+        setColaboradores(dados);
+      });
+  }, []);
+
+  function deletarColaborador(nome) {
     setColaboradores(
-      colaboradores.filter((colaborador) => colaborador.id !== id)
+      colaboradores.filter((colaborador) => colaborador.nome !== nome)
     );
   }
 
