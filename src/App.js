@@ -89,18 +89,37 @@ function App() {
     setTimes([...times, { nome, cor, id: uuidv4() }]);
   }
 
+  const [formularioVisivel, setIsFormularioVisivel] = useState(true);
+
+  const toggleEscondeForm = () => {
+    setIsFormularioVisivel(!formularioVisivel);
+  };
+
   return (
     <div>
       <Banner />
-      <Formulario
-        aoCriarTime={cadastrarTime}
-        times={times.map((time) => time.nome)}
-        aoCadastrar={(colaborador) =>
-          setColaboradores([...colaboradores, colaborador])
-        }
-      />
+      {formularioVisivel ? (
+        <Formulario
+          aoCriarTime={cadastrarTime}
+          times={times.map((time) => time.nome)}
+          aoCadastrar={(colaborador) =>
+            setColaboradores([...colaboradores, colaborador])
+          }
+        />
+      ) : (
+        ""
+      )}
+
       <section className="times">
-        <h1>Minha organização</h1>
+        <section className="times-header">
+          <h1>Minha organização</h1>
+          <img
+            src="/imagens/btn-icone.png"
+            alt="teste"
+            style={{ backgroundColor: "blue", borderRadius: "20px" }}
+            onClick={toggleEscondeForm}
+          />
+        </section>
         {times.map((time, indice) => (
           <Time
             aoFavoritar={resolverFavorito}
