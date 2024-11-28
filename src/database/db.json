@@ -1,0 +1,249 @@
+{
+  "colaboradores": [
+    {
+      "nome": "Mateus Bernart",
+      "cargo": "Dev",
+      "imagem": "https://github.com/mateus-bernart.png",
+      "time": "Programação",
+      "favorito": false
+    },
+    {
+      "nome": "João Silva",
+      "cargo": "Back-End Developer",
+      "imagem": "https://github.com/joao-silva.png",
+      "time": "Programação",
+      "favorito": true
+    },
+    {
+      "nome": "Mariana Santos",
+      "cargo": "Full-stack Developer",
+      "imagem": "https://github.com/mariana-santos.png",
+      "time": "Programação",
+      "favorito": false
+    },
+    {
+      "nome": "Thiago Almeida",
+      "cargo": "Mobile Developer",
+      "imagem": "https://github.com/thiago-almeida.png",
+      "time": "Programação",
+      "favorito": true
+    },
+    {
+      "nome": "Fernanda Costa",
+      "cargo": "Game Developer",
+      "imagem": "https://github.com/fernanda-costa.png",
+      "time": "Programação",
+      "favorito": false
+    },
+    {
+      "nome": "Ana Souza",
+      "cargo": "Front-End Developer",
+      "imagem": "https://github.com/ana-souza.png",
+      "time": "Front-End",
+      "favorito": true
+    },
+    {
+      "nome": "Paulo Henrique",
+      "cargo": "UI Developer",
+      "imagem": "https://github.com/paulo-henrique.png",
+      "time": "Front-End",
+      "favorito": false
+    },
+    {
+      "nome": "Camila Rodrigues",
+      "cargo": "Web Designer",
+      "imagem": "https://github.com/camila-rodrigues.png",
+      "time": "Front-End",
+      "favorito": true
+    },
+    {
+      "nome": "Rafael Gomes",
+      "cargo": "React Developer",
+      "imagem": "https://github.com/rafael-gomes.png",
+      "time": "Front-End",
+      "favorito": false
+    },
+    {
+      "nome": "Juliana Martins",
+      "cargo": "Front-End Architect",
+      "imagem": "https://github.com/juliana-martins.png",
+      "time": "Front-End",
+      "favorito": true
+    },
+    {
+      "nome": "Carlos Lima",
+      "cargo": "Data Scientist",
+      "imagem": "https://github.com/carlos-lima.png",
+      "time": "Data Science",
+      "favorito": false
+    },
+    {
+      "nome": "Bianca Alves",
+      "cargo": "Machine Learning Engineer",
+      "imagem": "https://github.com/bianca-alves.png",
+      "time": "Data Science",
+      "favorito": true
+    },
+    {
+      "nome": "Roberto Nunes",
+      "cargo": "Big Data Engineer",
+      "imagem": "https://github.com/roberto-nunes.png",
+      "time": "Data Science",
+      "favorito": false
+    },
+    {
+      "nome": "Isabela Rocha",
+      "cargo": "AI Researcher",
+      "imagem": "https://github.com/isabela-rocha.png",
+      "time": "Data Science",
+      "favorito": true
+    },
+    {
+      "nome": "Eduardo Pinto",
+      "cargo": "Statistician",
+      "imagem": "https://github.com/eduardo-pinto.png",
+      "time": "Data Science",
+      "favorito": false
+    },
+    {
+      "nome": "Beatriz Marques",
+      "cargo": "DevOps Engineer",
+      "imagem": "https://github.com/beatriz-marques.png",
+      "time": "Devops",
+      "favorito": true
+    },
+    {
+      "nome": "Vinícius Araújo",
+      "cargo": "Site Reliability Engineer",
+      "imagem": "https://github.com/vinicius-araujo.png",
+      "time": "Devops",
+      "favorito": false
+    },
+    {
+      "nome": "Renata Lopes",
+      "cargo": "Cloud Architect",
+      "imagem": "https://github.com/renata-lopes.png",
+      "time": "Devops",
+      "favorito": true
+    },
+    {
+      "nome": "Gustavo Souza",
+      "cargo": "Infrastructure Engineer",
+      "imagem": "https://github.com/gustavo-souza.png",
+      "time": "Devops",
+      "favorito": false
+    },
+    {
+      "nome": "Sofia Ramos",
+      "cargo": "Platform Engineer",
+      "imagem": "https://github.com/sofia-ramos.png",
+      "time": "Devops",
+      "favorito": true
+    },
+    {
+      "nome": "Lucas Fernandes",
+      "cargo": "UX Designer",
+      "imagem": "https://github.com/lucas-fernandes.png",
+      "time": "UX e Design",
+      "favorito": true
+    },
+    {
+      "nome": "Gabriela Silva",
+      "cargo": "UI Designer",
+      "imagem": "https://github.com/gabriela-silva.png",
+      "time": "UX e Design",
+      "favorito": false
+    },
+    {
+      "nome": "Felipe Oliveira",
+      "cargo": "Interaction Designer",
+      "imagem": "https://github.com/felipe-oliveira.png",
+      "time": "UX e Design",
+      "favorito": true
+    },
+    {
+      "nome": "Carolina Vieira",
+      "cargo": "Product Designer",
+      "imagem": "https://github.com/carolina-vieira.png",
+      "time": "UX e Design",
+      "favorito": false
+    },
+    {
+      "nome": "Pedro Martins",
+      "cargo": "Service Designer",
+      "imagem": "https://github.com/pedro-martins.png",
+      "time": "UX e Design",
+      "favorito": true
+    },
+    {
+      "nome": "Ana Souza",
+      "cargo": "Front-End Developer",
+      "imagem": "https://github.com/ana-souza.png",
+      "time": "Front-End",
+      "favorito": true
+    },
+    {
+      "nome": "Paulo Henrique",
+      "cargo": "UI Developer",
+      "imagem": "https://github.com/paulo-henrique.png",
+      "time": "Front-End",
+      "favorito": false
+    },
+    {
+      "nome": "Camila Rodrigues",
+      "cargo": "Web Designer",
+      "imagem": "https://github.com/camila-rodrigues.png",
+      "time": "Front-End",
+      "favorito": true
+    },
+    {
+      "nome": "Rafael Gomes",
+      "cargo": "React Developer",
+      "imagem": "https://github.com/rafael-gomes.png",
+      "time": "Front-End",
+      "favorito": false
+    },
+    {
+      "nome": "Juliana Martins",
+      "cargo": "Front-End Architect",
+      "imagem": "https://github.com/juliana-martins.png",
+      "time": "Front-End",
+      "favorito": true
+    },
+    {
+      "nome": "Thiago Almeida",
+      "cargo": "Mobile Developer",
+      "imagem": "https://github.com/thiago-almeida.png",
+      "time": "Mobile",
+      "favorito": true
+    },
+    {
+      "nome": "Marina Lopes",
+      "cargo": "iOS Developer",
+      "imagem": "https://github.com/marina-lopes.png",
+      "time": "Mobile",
+      "favorito": false
+    },
+    {
+      "nome": "Eduardo Costa",
+      "cargo": "Android Developer",
+      "imagem": "https://github.com/eduardo-costa.png",
+      "time": "Mobile",
+      "favorito": true
+    },
+    {
+      "nome": "Renan Silva",
+      "cargo": "Flutter Developer",
+      "imagem": "https://github.com/renan-silva.png",
+      "time": "Mobile",
+      "favorito": false
+    },
+    {
+      "nome": "Sofia Nascimento",
+      "cargo": "React Native Developer",
+      "imagem": "https://github.com/sofia-nascimento.png",
+      "time": "Mobile",
+      "favorito": true
+    }
+  ]
+}
