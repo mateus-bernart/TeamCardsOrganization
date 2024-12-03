@@ -9,12 +9,12 @@ const Formulario = ({ aoCadastrar, times, aoCriarTime }) => {
   const [cargo, setCargo] = useState("");
   const [imagem, setImagem] = useState("");
   const [time, setTime] = useState("");
+
   const [nomeTime, setNomeTime] = useState("");
   const [corTime, setCorTime] = useState("");
 
   const aoSubmeter = (evento) => {
     evento.preventDefault();
-    console.log("form enviado", nome, cargo, imagem, time);
     aoCadastrar({
       nome,
       cargo,

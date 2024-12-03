@@ -1,11 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 import Banner from "./componentes/Banner";
 import Formulario from "./componentes/Formulario";
 import Rodape from "./componentes/Rodape";
 import Time from "./componentes/Time";
 import { v4 as uuidv4 } from "uuid";
+import colaboradoresReducer, {
+  initialColaboradoresState,
+} from "./colaboradoresReducer";
 
 function App() {
+  const [colaboradores, dispatchColaboradores] = useReducer(
+    colaboradoresReducer,
+    initialColaboradoresState
+  );
+
   const [times, setTimes] = useState([
     {
       id: uuidv4(),
@@ -44,32 +52,15 @@ function App() {
     },
   ]);
 
-  // const inicial = [
-  //   {
-  //     id: uuidv4(),
-  //     nome: "Mateus Bernart",
-  //     cargo: "Dev",
-  //     imagem: "https://github.com/mateus-bernart.png",
-  //     time: times[0].nome,
-  //     favorito: false,
-  //   },
-  // ];
-
-  const [colaboradores, setColaboradores] = useState([]);
+  // const [colaboradores, setColaboradores] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:8080/colaboradores")
       .then((resposta) => resposta.json())
       .then((dados) => {
-        setColaboradores(dados);
+        dispatchColaboradores({ tipo: "SET_COLABORADORES", payload: dados });
       });
   }, []);
-
-  function deletarColaborador(nome) {
-    setColaboradores(
-      colaboradores.filter((colaborador) => colaborador.nome !== nome)
-    );
-  }
 
   function mudarCor(cor, id) {
     setTimes(
@@ -78,17 +69,6 @@ function App() {
           time.cor = cor;
         }
         return time;
-      })
-    );
-  }
-
-  function resolverFavorito(id) {
-    setColaboradores(
-      colaboradores.map((colaborador) => {
-        if (colaborador.id === id) {
-          colaborador.favorito = !colaborador.favorito;
-        }
-        return colaborador;
       })
     );
   }
@@ -111,7 +91,10 @@ function App() {
           aoCriarTime={cadastrarTime}
           times={times.map((time) => time.nome)}
           aoCadastrar={(colaborador) =>
-            setColaboradores([...colaboradores, colaborador])
+            dispatchColaboradores({
+              tipo: "ADD_COLABORADOR",
+              payload: colaborador,
+            })
           }
         />
       ) : (
@@ -130,14 +113,21 @@ function App() {
         </section>
         {times.map((time, indice) => (
           <Time
-            aoFavoritar={resolverFavorito}
             mudarCor={mudarCor}
             key={indice}
             time={time}
             colaboradores={colaboradores.filter(
               (colaborador) => colaborador.time === time.nome
             )}
-            aoDeletar={deletarColaborador}
+            aoFavoritar={(id) =>
+              dispatchColaboradores({ tipo: "TOGGLE_FAVORITO", payload: id })
+            }
+            aoDeletar={(nome) =>
+              dispatchColaboradores({
+                tipo: "DELETE_COLABORADOR",
+                payload: nome,
+              })
+            }
           />
         ))}
       </section>
