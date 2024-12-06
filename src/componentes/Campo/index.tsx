@@ -1,4 +1,14 @@
 import "./campo.css";
+import React from "react";
+
+interface CampoProps {
+  aoAlterado: (valor: string) => void;
+  label: string;
+  placeholder: string;
+  valor: string;
+  obrigatorio?: boolean;
+  type?: "text" | "password" | "date" | "email" | "number" | "color";
+}
 
 const Campo = ({
   type = "text",
@@ -7,7 +17,7 @@ const Campo = ({
   valor,
   aoAlterado,
   obrigatorio = false,
-}) => {
+}: CampoProps) => {
   return (
     <div className={`campo campo-${type}`}>
       <label>{label}</label>

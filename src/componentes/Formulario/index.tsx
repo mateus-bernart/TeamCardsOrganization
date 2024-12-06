@@ -3,8 +3,17 @@ import Botao from "../Botao";
 import Campo from "../Campo";
 import ListaSuspensa from "../ListaSuspensa";
 import "./formulario.css";
+import React from "react";
+import { IColaborador } from "../../compartilhado/interfaces/IColaboradores";
+import { ITime } from "../../compartilhado/interfaces/ITimes";
 
-const Formulario = ({ aoCadastrar, times, aoCriarTime }) => {
+interface FormularioProps {
+  aoCadastrar: (colaborador: IColaborador) => void;
+  aoCriarTime: (time: ITime) => void;
+  times: string[];
+}
+
+const Formulario = ({ aoCadastrar, times, aoCriarTime }: FormularioProps) => {
   const [nome, setNome] = useState("");
   const [cargo, setCargo] = useState("");
   const [imagem, setImagem] = useState("");
@@ -13,7 +22,7 @@ const Formulario = ({ aoCadastrar, times, aoCriarTime }) => {
   const [nomeTime, setNomeTime] = useState("");
   const [corTime, setCorTime] = useState("");
 
-  const aoSubmeter = (evento) => {
+  const aoSubmeter = (evento: React.FormEvent<HTMLFormElement>) => {
     evento.preventDefault();
     aoCadastrar({
       nome,
@@ -21,6 +30,10 @@ const Formulario = ({ aoCadastrar, times, aoCriarTime }) => {
       imagem,
       time,
     });
+    setNome("");
+    setCargo("");
+    setImagem("");
+    setTime("");
   };
 
   return (
@@ -44,6 +57,7 @@ const Formulario = ({ aoCadastrar, times, aoCriarTime }) => {
         <Campo
           label="Imagem"
           placeholder="Informe o endereço da imagem "
+          valor={imagem}
           aoAlterado={(valor) => setImagem(valor)}
         />
         <ListaSuspensa

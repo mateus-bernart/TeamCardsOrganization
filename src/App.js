@@ -85,7 +85,10 @@ function App() {
 
   return (
     <div>
-      <Banner />
+      <Banner
+        enderecoImagem="/imagens/banner.png"
+        textoAlternativo="Banner pessoas e times"
+      />
       {formularioVisivel ? (
         <Formulario
           aoCriarTime={cadastrarTime}
